@@ -15,10 +15,10 @@ const NavBar = () => {
                 <a href="">Home</a>
                 </MenuItems>
                 <MenuItems>
-                <a href="">About Us</a>
+                <a href="">Glasses</a>
                 </MenuItems>
                 <MenuItems>
-                <a href="">Glasses</a>
+                <a href="">About Us</a>
                 </MenuItems>
                 <MenuItems>
                 <a href="">Contact</a>

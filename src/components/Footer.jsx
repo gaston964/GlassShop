@@ -1,12 +1,24 @@
 import React from 'react'
-
+import { FooterContainer,FooterNav, FooterNavLi, FooterNavUl, FooterRedes } from './FooterElements'
 const Footer = () => {
     return (
-        <div>footer
-            <li>Mero</li>
-            <li>Mira</li>
-            <li>Moro</li>
-        </div>
+    <>
+    <FooterContainer>
+        <FooterNav>
+            <FooterNavUl>
+                <FooterNavLi><a href="">Home</a></FooterNavLi>
+                <FooterNavLi><a href="">About Us</a></FooterNavLi>
+                <FooterNavLi><a href="">Glasses</a></FooterNavLi>
+                <FooterNavLi><a href="">Glasses</a></FooterNavLi>
+            </FooterNavUl>
+            <FooterRedes>
+                <FooterNavLi>Facebook</FooterNavLi>
+                <FooterNavLi>Instagram</FooterNavLi>
+                <FooterNavLi>Whatsupp</FooterNavLi>
+            </FooterRedes>
+        </FooterNav>
+    </FooterContainer>
+    </>
     )
 }
 

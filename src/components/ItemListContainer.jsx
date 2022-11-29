@@ -1,21 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import ItemCount from './ItemCount';
 
 const Container = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin: auto;
-    background-color: lightgray;
     color: black;
     font-family:'Source Sans Pro', sans-serif;
-    height: 500px;
-    width: 500px;
+    height: 100vh;
 `;
 const ItemListContainer = ({greeting}) => {
     return (
         <>
             <Container>
             <h2>{greeting}</h2>
+            <ItemCount/>
             </Container>
         </>
     )

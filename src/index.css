@@ -7,8 +7,10 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
   width:100%;
   height:100vh;
+  background-image: url(../public/consultorio-oftalmologico-clinica-equipo-examen-visual-dispositivos-tratamiento-vision-sala-operaciones-oftalmologia-equipo-funcionamiento-correccion-vision-laser_133138-697\ \(1\).jpg);
 }
+
 a{
   text-decoration: none;
-  color: white;
+  color: rgb(65, 65, 65);
 }

@@ -12,9 +12,9 @@ const Footer = () => {
                 <FooterNavLi><a href="">Glasses</a></FooterNavLi>
             </FooterNavUl>
             <FooterRedes>
-                <FooterNavLi>Facebook</FooterNavLi>
-                <FooterNavLi>Instagram</FooterNavLi>
-                <FooterNavLi>Whatsupp</FooterNavLi>
+                <FooterNavLi><a href="">Facebook</a></FooterNavLi>
+                <FooterNavLi><a href="">Instagram</a></FooterNavLi>
+                <FooterNavLi><a href="">Whatsupp</a></FooterNavLi>
             </FooterRedes>
         </FooterNav>
     </FooterContainer>

@@ -35,4 +35,7 @@ export const MenuItems = styled.li`
         border-bottom: 0.3rem solid #b1b1b1;
         transition: 0.4s ease-in;
     }
+    a{
+        color: white;
+    }
 `;

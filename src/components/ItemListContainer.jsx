@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import ItemList from './ItemList';
 import ItemCount from './ItemCount';
+import ItemDetailContainer from './ItemDetailContainer';
+import PracticaFetch from './PracticaFetch';
 
 const Container = styled.div`
     display: flex;
@@ -11,7 +13,6 @@ const Container = styled.div`
     margin: auto;
     color: black;
     font-family:'Source Sans Pro', sans-serif;
-    height: 100vh;
     background-color: lightgray;
 `;
 const ItemListContainer = ({greeting}) => {
@@ -19,7 +20,10 @@ const ItemListContainer = ({greeting}) => {
         <>
             <Container>
             <h2>{greeting}</h2>
-            <ItemList/>
+{/*             <ItemList/> */}
+            {/* <ItemCount stock={item.stock}/> */}
+            {/* <ItemDetailContainer/> */}
+            <PracticaFetch/>
             <ItemCount/>
             </Container>
         </>

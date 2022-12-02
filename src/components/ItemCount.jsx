@@ -16,10 +16,18 @@ margin: 15px;
 
 const ItemCount = () => {
 const [contador, setContador] = useState(0)
-let stock = 10
-let sinStock = 0
-const AgregarContador = () => contador === stock ? <Button disable={true}></Button> : setContador(contador+1);
-const RestarContador = () => contador === sinStock ?  <Button disable={true}></Button> : setContador(contador - 1);
+
+const AgregarContador = () => {
+    if (contador < 10) {
+        setContador(contador +1);
+    }
+}
+const RestarContador = () => {
+    if (contador >= 1) {
+        setContador(contador - 1);
+        
+    }
+}
 
     return (
         <>

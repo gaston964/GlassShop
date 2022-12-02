@@ -1,9 +1,21 @@
 import React from 'react'
 
-const Item = ({id, title, stock}) => {
+const Item = ({ id, title, stock, description }) => {
     return (
         <>
-            <li>{id}. {title} - {stock}</li>
+            <div>
+                <figure >
+                    <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+                </figure>
+                <div>
+                    <h2 >{id} - {title}</h2>
+                    <h4 >Stock: {stock}</h4>
+                    <p>{description}</p>
+                    <div>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

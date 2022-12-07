@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from 'react'
 import Item from './Item'
 
-
-const ItemList = () => {
-/*     const [item, setItem] = useState([])
-    useEffect(() => {
-        getItems().then(response => {
-            setItem(response)
-        })
-    }, [])
-
-    const getItems = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(Producs)
-            }, 2000);
-        })
-    } */
+const ItemList = ({productList}) => {
     return (
         <>
-            <div>
-                Items
-                {/* {item.map(i => <Item key={i.id} {...i} />)} */}
+            <div className='itemList'>
+                {productList.map(pr => <li>{pr.name}</li>)}
             </div>
         </>
     )
 }
 
 export default ItemList
+
+{/* <Item key={pr.id} {...productList} /> */}
+/* const [personajes, setPersonajes] = useState([])
+useEffect(() => {
+    setTimeout(() => {
+        getCharacter()
+    }, 2000);
+}, [])
+const getCharacter = () => {
+    fetch('https://rickandmortyapi.com/api/character')
+        .then(response => response.json())
+        .then(data => {
+            setPersonajes(data.results)
+            console.log(data.results);
+        })
+} */

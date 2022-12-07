@@ -1,13 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-`;
-
-
 
 const PracticaFetch = () => {
 
@@ -22,7 +13,7 @@ const PracticaFetch = () => {
     console.log(pokemons.sprites.front_default)
     return (
         <>
-            <Div>
+            <div>
                 <h3>PracticaFetch</h3>
                 {pokemons
                     ?
@@ -34,7 +25,7 @@ const PracticaFetch = () => {
                     :
                     <div>Cargando...</div>
                 }
-            </Div>
+            </div>
         </>
     )
 }

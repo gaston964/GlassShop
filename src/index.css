@@ -1,16 +1,236 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-};
-body{
-  font-family: 'Source Sans Pro', sans-serif;
-  width:100%;
-  height:100vh;
-  background-image: url(../public/consultorio-oftalmologico-clinica-equipo-examen-visual-dispositivos-tratamiento-vision-sala-operaciones-oftalmologia-equipo-funcionamiento-correccion-vision-laser_133138-697\ \(1\).jpg);
 }
 
-a{
+;
+
+#principal {
+  min-height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url('/patternpad.jpeg');
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url('/patternpad.jpeg');
+
+}
+
+/* NavBar */
+.containerNavBar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(122, 122, 122, 0.904);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+}
+
+.iconNavBar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.linkNavBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.linkNavBar>li:hover {
+  background-color: rgb(83, 83, 83);
+  border-bottom: 0.3rem solid rgb(248, 248, 248);
+  transition: 0.5s ease-in;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+}
+
+.linkNavBar a {
   text-decoration: none;
-  color: rgb(65, 65, 65);
+  color: whitesmoke;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(122, 122, 122, 0.747);
+  flex-wrap: wrap;
+}
+
+.footerUl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.footerUl a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.footerRedes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Hover effect icon */
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+.icon a {
+  color: black;
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffffa1;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #16df0f;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+.logoFooter {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+/* ItemListContainer */
+.itemListContaier {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.itemListContaier>h2 {
+  text-align: center;
+}
+
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.itemList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ItemCount */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCount {
+  width: 30px;
+  height: 25px;
+  border-radius: 35%;
+  margin: 15px;
 }

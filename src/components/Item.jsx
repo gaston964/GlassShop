@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Item = ({ id, name, status, image }) => {
+
+const Item = ({ id, title, pictureUrl }) => {
     return (
         <>
-            <div>
-                <figure >
-                    <img src={image} alt={name} />
-                </figure>
-                <div>
-                    <h2 >{id} - {name}</h2>
-                    <h4 >Status: {status}</h4>
+                <div className="itemCard">
+                    <figure >
+                        <img src={pictureUrl} alt={title} />
+                    </figure>
+                    <div>
+                        <h2 >{id} - {title}</h2>
+                    </div>
                 </div>
-            </div>
         </>
     )
 }

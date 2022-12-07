@@ -1,18 +1,4 @@
 import React, {useState} from 'react'
-import styled from 'styled-components'
-
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`;
-const Button = styled.button`
-width: 30px;
-height: 25px;
-border-radius: 35%;
-margin: 15px;
-`;
 
 const ItemCount = () => {
 const [contador, setContador] = useState(0)
@@ -31,15 +17,15 @@ const RestarContador = () => {
 
     return (
         <>
-        <Div>
+        <div className='contenedor'>
         <div>ItemCount</div>
         <div>
-            <Button onClick={AgregarContador}>+</Button>
+            <button className='buttonCount' onClick={AgregarContador}>+</button>
             {contador}
-            <Button onClick={RestarContador}>-</Button>
+            <button className='buttonCount' onClick={RestarContador}>-</button>
         </div>
         <div>Stock: 10</div>
-        </Div>
+        </div>
         </>
     )
 }

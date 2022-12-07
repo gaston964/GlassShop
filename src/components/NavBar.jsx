@@ -1,31 +1,26 @@
 import React from 'react'
-import { Menu, NavContainer, MenuItems, IconNav } from './NavBarElements'
+import {Link} from 'react-router-dom'
 import { AiFillStar } from "react-icons/ai";
 import CartWidget from './CartWidget';
 const NavBar = () => {
     return (
         <>
-        <NavContainer>
-            <IconNav>
+        <nav className='containerNavBar'>
+            <Link to='/GlassShop/' className='iconNavBar'>
                 <AiFillStar/>
                 GlassShop
-            </IconNav>
-            <Menu>
-                <MenuItems>
-                <a href="">Home</a>
-                </MenuItems>
-                <MenuItems>
-                <a href="">Glasses</a>
-                </MenuItems>
-                <MenuItems>
-                <a href="">About Us</a>
-                </MenuItems>
-                <MenuItems>
-                <a href="">Contact</a>
-                </MenuItems>
-            </Menu>
+            </Link>
+            <div>
+                <ul className='linkNavBar'>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Glasses</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
             <CartWidget/>
-        </NavContainer>
+            </div>
+        </nav>
         </>
     )
 }

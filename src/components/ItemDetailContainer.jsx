@@ -16,3 +16,22 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
+
+/* 
+({ id, title, pictureUrl, stock, description }) => {
+    return (
+        <>
+                <div className="itemCard">
+                    <figure >
+                        <img src={pictureUrl} alt={title} />
+                    </figure>
+                    <div>
+                        <h2 >{id} - {title}</h2>
+                        <p>{description}</p>
+                        <h4 >Stock: {stock}</h4>
+                    </div>
+                </div>
+        </>
+    )
+}
+*/

@@ -8,27 +8,27 @@ const ItemDetailContainer = () => {
         getItemDetail()
             .then(response => setItemDetail(response))
     }, [])
-
+    const {id}= useParams()
     const getItemDetail = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(products)
+                resolve(products.find((item) => item.id === parseInt(id)))
             }, 2000);
         })
     }
 
     return (
         <>
-        <div className="itemCard">
-                    <figure >
-                        <img src={itemDetail.pictureUrl} alt={itemDetail.title} />
-                    </figure>
-                    <div>
-                        <h2 >{itemDetail.id} - {itemDetail.title}</h2>
-                        <p>{itemDetail.description}</p>
-                        <h4 >Stock: {itemDetail.stock}</h4>
-                    </div>
+            <div className="itemCard">
+                <figure >
+                    <img src={itemDetail.pictureUrl} alt={itemDetail.title} />
+                </figure>
+                <div>
+                    <h2 >{itemDetail.id} - {itemDetail.title}</h2>
+                    <p>{itemDetail.description}</p>
+                    <h4 >Stock: {itemDetail.stock}</h4>
                 </div>
+            </div>
             <div>
                 <ItemCount />
             </div>

@@ -1,15 +1,36 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { products } from '../mock/products'
 import ItemCount from './ItemCount'
-
 const ItemDetailContainer = () => {
+    const [itemDetail, setItemDetail] = useState([])
+    useEffect(() => {
+        getItemDetail()
+            .then(response => setItemDetail(response))
+    }, [])
+
+    const getItemDetail = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(products)
+            }, 2000);
+        })
+    }
 
     return (
         <>
+        <div className="itemCard">
+                    <figure >
+                        <img src={itemDetail.pictureUrl} alt={itemDetail.title} />
+                    </figure>
+                    <div>
+                        <h2 >{itemDetail.id} - {itemDetail.title}</h2>
+                        <p>{itemDetail.description}</p>
+                        <h4 >Stock: {itemDetail.stock}</h4>
+                    </div>
+                </div>
             <div>
-                <h3>ItemDetailContainer</h3>
-            </div>
-            <div>
-                <ItemCount/>
+                <ItemCount />
             </div>
         </>
     )
@@ -34,4 +55,20 @@ export default ItemDetailContainer
         </>
     )
 }
+
+
+
+
+const route = useParams()
+    const [item, setItem] = useState({})
+    const getProducts = () => {
+        return new Promise((resolve, reject) => {
+            resolve(products.find(product => product.id === 1))
+        })
+    }
+useEffect(() => {
+    getProducts()
+        .then(response => setItem(response))
+}, [])
+
 */

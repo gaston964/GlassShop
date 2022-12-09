@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({stock}) => {
 const [contador, setContador] = useState(0)
 
 const AgregarContador = () => {
-    if (contador < 10) {
+    if (contador < stock) {
         setContador(contador +1);
     }
 }
@@ -24,7 +24,7 @@ const RestarContador = () => {
             {contador}
             <button className='buttonCount' onClick={RestarContador}>-</button>
         </div>
-        <div>Stock: 10</div>
+        <div>Stock: {stock}</div>
         </div>
         </>
     )

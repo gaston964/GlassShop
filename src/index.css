@@ -87,13 +87,21 @@ li {
 .footerUl {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 250px;
+  padding: 15px;
+  /* justify-content: flex-start;
+  
+  align-items: center;
+  width: 250px;
+  margin: 15px; */
 }
 
 .footerUl a {
   text-decoration: none;
   color: whitesmoke;
+  margin-bottom: 10px;
 }
 .footerRedes{
   display: flex;

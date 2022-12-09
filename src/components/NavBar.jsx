@@ -12,8 +12,9 @@ const NavBar = () => {
             </Link>
             <div className='linkNavBar'>
                     <Link to={'/GlassShop/'}>Home</Link>
-                    <Link to={'/GlassShop/'}>Glasses</Link>
-                    <Link to={'/GlassShop/'}>Contact Us</Link>
+                    <Link to={'/GlassShop/category/Versace/'}>Versace</Link>
+                    <Link to={'/GlassShop/category/Rayban/'}>Rayban</Link>
+                    <Link to={'/GlassShop/category/Vogue/'}>Vogue</Link>
             </div>
             <div>
             <CartWidget/>

@@ -9,7 +9,7 @@ export const products = [
         description: "VulkModelo: Harry - Color del Marco: Negro",
         price: 1550,
         stock: 10,
-        pictureUrl: "../img/vulk1.jpg",
+        pictureUrl: "/img/vulk1.jpg",
         category: "Vulk",
     },
     {
@@ -18,7 +18,7 @@ export const products = [
         description: "VulkModelo: Ethereal SBLK - Color del Marco: Negro",
         price: 2750,
         stock: 15,
-        pictureUrl: "../img/vulk2.jpg",
+        pictureUrl: "/img/vulk2.jpg",
         category: "Vulk",
     },
     {
@@ -27,7 +27,7 @@ export const products = [
         description: "VulkModelo: LVI C2 - Color del Marco: Azul oscuro metálico",
         price: 4000,
         stock: 20,
-        pictureUrl: "../img/vulk3.jpg",
+        pictureUrl: "/img/vulk3.jpg",
         category: "Vulk",
     },
     {
@@ -36,7 +36,7 @@ export const products = [
         description: "VulkModelo:  Netaglio Transparente Ultraliviano - Color del Marco: Gris",
         price: 3600,
         stock: 12,
-        pictureUrl: "../img/vulk4.jpg",
+        pictureUrl: "/img/vulk4.jpg",
         category: "Vulk",
     },
     {
@@ -45,7 +45,7 @@ export const products = [
         description: "VogueModelo: Vogue Eyewear - Color del Marco: Marrón / Transparente",
         price: 3600,
         stock: 11,
-        pictureUrl: "../img/vogue1.jpg",
+        pictureUrl: "/img/vogue1.jpg",
         category: "Vogue",
     },
     {
@@ -54,7 +54,7 @@ export const products = [
         description: "VogueModelo: VISTA 0VO4088 - Color del Marco: Negro / Dorado",
         price: 3600,
         stock: 8,
-        pictureUrl: "../img/vogue2.jpg",
+        pictureUrl: "/img/vogue2.jpg",
         category: "Vogue",
     },
     {
@@ -63,7 +63,7 @@ export const products = [
         description: "VogueModelo: Vogue VO4011 - Color del Marco: Marrón y Dorado",
         price: 3600,
         stock: 10,
-        pictureUrl: "../img/vogue3.png",
+        pictureUrl: "/img/vogue3.png",
         category: "Vogue",
     },
     {
@@ -72,7 +72,7 @@ export const products = [
         description: "VogueModelo: Vogue Vista Vo4208 - Color del Marco: Negro y Dorado",
         price: 3600,
         stock: 6,
-        pictureUrl: "../img/vogue4.jpg",
+        pictureUrl: "/img/vogue4.jpg",
         category: "Vogue",
     },
     {
@@ -81,7 +81,7 @@ export const products = [
         description: "VersaceModelo: Versace Vista VE3271 GB1 54 - Color del Marco: Negro y Dorado",
         price: 3600,
         stock: 10,
-        pictureUrl: "../img/versace1.jpg",
+        pictureUrl: "/img/versace1.jpg",
         category: "Versace",
     },
     {
@@ -90,7 +90,7 @@ export const products = [
         description: "VersaceModelo: Versace Ve 1271 - Color del Marco: Negro y Dorado",
         price: 3600,
         stock: 17,
-        pictureUrl: "../img/versace2.jpg",
+        pictureUrl: "/img/versace2.jpg",
         category: "Versace",
     },
     {
@@ -99,7 +99,7 @@ export const products = [
         description: "VersaceModelo: Versace Ve 3251 B - Color del Marco: Transparent light brown",
         price: 3600,
         stock: 11,
-        pictureUrl: "../img/versace3.jpg",
+        pictureUrl: "/img/versace3.jpg",
         category: "Versace",
     },
     {
@@ -108,7 +108,7 @@ export const products = [
         description: "VersaceModelo: Versace Ve3303 593 - Color del Marco: Gris Transparente",
         price: 3600,
         stock: 5,
-        pictureUrl: "../img/versace4.jpg",
+        pictureUrl: "/img/versace4.jpg",
         category: "Versace",
     },
     {
@@ -117,7 +117,7 @@ export const products = [
         description: "Ray Ban Modelo: Tech RB8415 - Color del Marco: Negro mate",
         price: 3600,
         stock: 10,
-        pictureUrl: "../img/rayban1.jpg",
+        pictureUrl: "/img/rayban1.jpg",
         category: "RayBan",
     },
     {
@@ -126,7 +126,7 @@ export const products = [
         description: "Ray Ban Modelo: Ray-Ban 7056 - Color del Marco: Negro y Rojo",
         price: 3600,
         stock: 8,
-        pictureUrl: "../img/rayban2.jpg",
+        pictureUrl: "/img/rayban2.jpg",
         category: "RayBan",
     },
     {
@@ -135,7 +135,7 @@ export const products = [
         description: "Ray Ban Modelo: Aviator Classic - Color del Marco: Plateado",
         price: 3600,
         stock: 10,
-        pictureUrl: "../img/rayban3.jpg",
+        pictureUrl: "/img/rayban3.jpg",
         category: "RayBan",
     },
     {
@@ -144,7 +144,7 @@ export const products = [
         description: "Ray Ban Modelo: RX8953 - Color del Marco: Negro",
         price: 3600,
         stock: 14,
-        pictureUrl: "../img/rayban4.jpg",
+        pictureUrl: "/img/rayban4.jpg",
         category: "RayBan",
     },
 ]

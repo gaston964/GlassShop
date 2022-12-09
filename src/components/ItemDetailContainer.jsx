@@ -8,7 +8,9 @@ const ItemDetailContainer = () => {
         getItemDetail()
             .then(response => setItemDetail(response))
     }, [])
-    const {id}= useParams()
+    const { id } = useParams()
+    /* caputura lo de la URL y lo pasa a codigo, lo pasa como string por eso usamos un parseInt o Number
+    es para capturar datos en este caso "id" */
     const getItemDetail = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -20,6 +22,21 @@ const ItemDetailContainer = () => {
     return (
         <>
             <div className="itemCard">
+                <img className='itemcard_img'src={itemDetail.pictureUrl} alt={itemDetail.title} />
+                <h1>{itemDetail.id} - {itemDetail.title}</h1>
+                <p class="price">${itemDetail.price}</p>
+                <p>{itemDetail.description}</p>
+                <h4 >Stock: {itemDetail.stock}</h4>
+                <ItemCount />
+            </div>
+        </>
+    )
+}
+
+export default ItemDetailContainer
+
+/* 
+<div className="itemCard">
                 <figure >
                     <img src={itemDetail.pictureUrl} alt={itemDetail.title} />
                 </figure>
@@ -30,33 +47,15 @@ const ItemDetailContainer = () => {
                 </div>
             </div>
             <div>
-                <ItemCount />
-            </div>
-        </>
-    )
-}
 
-export default ItemDetailContainer
-
-/* 
-({ id, title, pictureUrl, stock, description }) => {
-    return (
-        <>
-                <div className="itemCard">
-                    <figure >
-                        <img src={pictureUrl} alt={title} />
-                    </figure>
-                    <div>
-                        <h2 >{id} - {title}</h2>
-                        <p>{description}</p>
-                        <h4 >Stock: {stock}</h4>
-                    </div>
-                </div>
-        </>
-    )
-}
-
-
+<div className="itemCard">
+    <img src={itemDetail.pictureUrl} alt={itemDetail.title} />
+    <h1>{itemDetail.id} - {itemDetail.title}</h1>
+    <p class="price">${itemDetail.price}</p>
+    <p>{itemDetail.description}</p>
+    <h4 >Stock: {itemDetail.stock}</h4>
+    <p><button>Add to Cart</button></p>
+</div>
 
 
 const route = useParams()

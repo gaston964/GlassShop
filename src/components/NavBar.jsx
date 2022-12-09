@@ -10,12 +10,10 @@ const NavBar = () => {
                 <AiFillStar/>
                 GlassShop
             </Link>
-            <div>
-                <ul className='linkNavBar'>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Glasses</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
+            <div className='linkNavBar'>
+                    <Link to={'/GlassShop/'}>Home</Link>
+                    <Link to={'/GlassShop/'}>Glasses</Link>
+                    <Link to={'/GlassShop/'}>Contact Us</Link>
             </div>
             <div>
             <CartWidget/>

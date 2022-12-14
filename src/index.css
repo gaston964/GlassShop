@@ -63,13 +63,26 @@ li {
   text-decoration: none;
   color: whitesmoke;
 }
-
+/* CartWidget */
 .cart {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background-color: lightgray;
+  border-radius: 45%;
+  width: 55px;
+  height: 50px;
+}
+.cart button{
+  font-size:2rem;
+  background: none;
+  border: none;
   cursor: pointer;
+}
+.cart span{
+  margin-bottom: 25px;
 }
 
 /* Footer */
@@ -221,6 +234,7 @@ li {
 .itemListContaier>h2 {
   text-align: center;
 }
+/* ITEM CARD */
 
 .itemCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -238,7 +252,17 @@ li {
   width: 100%;
   height: 100%;
 }
-
+.item-det-button{
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 .itemList {
   width: 100%;
   height: 100%;
@@ -260,6 +284,10 @@ li {
   width: 100%;
   font-size: 18px;
 }
+.item_price {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
 
 .item_button:hover {
   opacity: 0.7;
@@ -272,7 +300,9 @@ li {
   justify-content: center;
   align-items: center;
 }
-
+.button_container{
+  display: flex;
+}
 .buttonCount {
   width: 30px;
   height: 25px;

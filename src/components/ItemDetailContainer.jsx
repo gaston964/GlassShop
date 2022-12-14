@@ -18,16 +18,18 @@ const ItemDetailContainer = () => {
             }, 2000);
         })
     }
-
+    const addToCart = (e) => {
+        console.log("funciono, se agregaron: ",e);
+    }
     return (
         <>
             <div className="itemCard">
                 <img className='itemcard_img'src={itemDetail.pictureUrl} alt={itemDetail.title} />
                 <h1>{itemDetail.id} - {itemDetail.title}</h1>
-                <p class="price">${itemDetail.price}</p>
+                <p className ="item_price">${itemDetail.price}</p>
                 <p>{itemDetail.description}</p>
                 <h4 >Stock: {itemDetail.stock}</h4>
-                <ItemCount stock={itemDetail.stock}/>
+                <ItemCount stock={itemDetail.stock} onAdd={addToCart}/>
             </div>
         </>
     )

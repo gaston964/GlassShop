@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 const [contador, setContador] = useState(0)
 
 const AgregarContador = () => {
@@ -19,12 +19,15 @@ const RestarContador = () => {
         <>
         <div className='contenedor'>
         <div>ItemCount</div>
-        <div>
+        <div className='button_container'>
             <button className='buttonCount' onClick={AgregarContador}>+</button>
+            <div>
             {contador}
+            </div>
             <button className='buttonCount' onClick={RestarContador}>-</button>
         </div>
         <div>Stock: {stock}</div>
+        <p><button onClick={()=> onAdd(contador)} className='item-det-button'>Add to Cart</button></p>
         </div>
         </>
     )

@@ -6,11 +6,11 @@ const Footer = () => {
         <>
             <footer className='footerContainer'>
                 <div className='footerUl'>
-                    <Link to={'/GlassShop/'}>Home</Link>
-                    <Link to={'/GlassShop/category/Versace/'}>Versace</Link>
-                    <Link to={'/GlassShop/category/RayBan/'}>Rayban</Link>
-                    <Link to={'/GlassShop/category/Vogue/'}>Vogue</Link>
-                    <Link to={'/GlassShop/category/Vulk/'}>Vulk</Link>
+                    <Link to={'/'}>Home</Link>
+                    <Link to={'/category/Versace/'}>Versace</Link>
+                    <Link to={'/category/RayBan/'}>Rayban</Link>
+                    <Link to={'/category/Vogue/'}>Vogue</Link>
+                    <Link to={'/category/Vulk/'}>Vulk</Link>
                 </div>
                 <div className='footerRedes'>
                     <ul className='wrapper'>

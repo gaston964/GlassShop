@@ -25,8 +25,8 @@ const ItemDetailContainer = () => {
         })
     }
     const {addToCart, cart} = useContext(CartContext)
-    const addHandler = () => {
-        addToCart(products)
+    const addHandler = (cantidad) => {
+        addToCart(itemDetail, cantidad)
     }
     console.log(cart);
     return (

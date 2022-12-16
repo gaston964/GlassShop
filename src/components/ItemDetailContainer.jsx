@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 import { products } from '../mock/products'
 import ItemCount from './ItemCount'
 import Loader from './Loader'
@@ -23,9 +24,11 @@ const ItemDetailContainer = () => {
             }, 2000);
         })
     }
-    const addToCart = (e) => {
-        console.log("funciono, se agregaron: ", e);
+    const {addToCart, cart} = useContext(CartContext)
+    const addHandler = () => {
+        addToCart(products)
     }
+    console.log(cart);
     return (
         <div className='item_datail'>
             {loading ?
@@ -37,7 +40,7 @@ const ItemDetailContainer = () => {
                     <p className="item_price">${itemDetail.price}</p>
                     <p>{itemDetail.description}</p>
                     <h4 >Stock: {itemDetail.stock}</h4>
-                    <ItemCount stock={itemDetail.stock} onAdd={addToCart} />
+                    <ItemCount stock={itemDetail.stock} onAdd={addHandler} />
                 </div>
             }
         </div>

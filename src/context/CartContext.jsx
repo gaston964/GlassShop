@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
-import { createContext } from 'react'
+import { createContext, useState } from "react"
+import { products } from "../mock/products"
 
-const CartContext = createContext()
+export const CartContext = createContext()
 
-const CartContextProvider = ({children}) => {
-    const[cart, setCart]=useState([])
-    const context = {
-        items: []
+export const CartContextProvider = ({children}) => {
+    const [cart, setCart] = useState([])
+    const addToCart = (e) => {
+        setCart([{
+            ...products,
+            cantidad: 1
+        }])
     }
     return (
-        <CartContext.Provider value={{context, cart}}>
-            {children}
-        </CartContext.Provider>
+    <CartContext.Provider value={{
+        cart,
+        addToCart
+    }}>
+        {children}
+    </CartContext.Provider>
     )
+    
 }
-
-export {CartContext, CartContextProvider}

@@ -84,6 +84,12 @@ li {
 .cart span{
   margin-bottom: 25px;
 }
+/* Loader */
+.loader{
+  display: flex;
+  justify-content: center;
+  margin-top: 220px;
+}
 
 /* Footer */
 .footerContainer {
@@ -233,6 +239,11 @@ li {
 
 .itemListContaier>h2 {
   text-align: center;
+}
+/* ItemDetailContainer */
+.item_datail{
+  height: 100vh;
+  margin-top: 55px;
 }
 /* ITEM CARD */
 

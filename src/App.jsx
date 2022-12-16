@@ -10,8 +10,8 @@ function App() {
     <>
     <NavBar/>
     <Routes>
-      <Route path='/' element={<ItemListContainer greeting={"Soy el Item List Container"}/>} />
-      <Route path='/category/:id' element={<ItemListContainer greeting={"Soy el Item List Container"}/>} />
+      <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a GlassShop"}/>} />
+      <Route path='/category/:id' element={<ItemListContainer greeting={"Bienvenidos a GlassShop"}/>} />
       <Route path='/item/:id' element={<ItemDetailContainer/>} />
       <Route path='/cart' element={<Cart/>} />
     </Routes>

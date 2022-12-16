@@ -1,38 +1,46 @@
-import React, {useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from '../mock/products'
 import ItemCount from './ItemCount'
+import Loader from './Loader'
 
 const ItemDetailContainer = () => {
     const [itemDetail, setItemDetail] = useState([])
     useEffect(() => {
+        setLoading(true)
         getItemDetail()
             .then(response => setItemDetail(response))
     }, [])
     const { id } = useParams()
     /* caputura lo de la URL y lo pasa a codigo, lo pasa como string por eso usamos un parseInt o Number
     es para capturar datos en este caso "id" */
+    const [loading, setLoading] = useState(false)
     const getItemDetail = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(products.find((item) => item.id === parseInt(id)))
+                setLoading(false)
             }, 2000);
         })
     }
     const addToCart = (e) => {
-        console.log("funciono, se agregaron: ",e);
+        console.log("funciono, se agregaron: ", e);
     }
     return (
-        <>
-            <div className="itemCard">
-                <img className='itemcard_img'src={itemDetail.pictureUrl} alt={itemDetail.title} />
-                <h1>{itemDetail.id} - {itemDetail.title}</h1>
-                <p className ="item_price">${itemDetail.price}</p>
-                <p>{itemDetail.description}</p>
-                <h4 >Stock: {itemDetail.stock}</h4>
-                <ItemCount stock={itemDetail.stock} onAdd={addToCart}/>
-            </div>
-        </>
+        <div className='item_datail'>
+            {loading ?
+                <div className='loader'><Loader/></div>
+                :
+                <div className="itemCard">
+                    <img className='itemcard_img' src={itemDetail.pictureUrl} alt={itemDetail.title} />
+                    <h1>{itemDetail.id} - {itemDetail.title}</h1>
+                    <p className="item_price">${itemDetail.price}</p>
+                    <p>{itemDetail.description}</p>
+                    <h4 >Stock: {itemDetail.stock}</h4>
+                    <ItemCount stock={itemDetail.stock} onAdd={addToCart} />
+                </div>
+            }
+        </div>
     )
 }
 

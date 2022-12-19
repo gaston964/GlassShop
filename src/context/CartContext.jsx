@@ -1,5 +1,4 @@
 import { createContext, useState } from "react"
-import { products } from "../mock/products"
 
 export const CartContext = createContext()
 
@@ -15,13 +14,22 @@ export const CartContextProvider = ({ children }) => {
             })
             setCart(carritoActualizado)
         } else {
-            setCart([...cart, { ...item, cantidad }])
+            return setCart([...cart, { ...item, cantidad }])
         }
+    }
+    const removeItem = (id) => {
+        const updateItems = cart.filter((item => item.id !== id))
+        setCart(updateItems)
+    }
+    const emptyCart = (cart) => { 
+        setCart([]);
     }
     return (
         <CartContext.Provider value={{
             cart,
-            addToCart
+            addToCart,
+            removeItem,
+            emptyCart,
         }}>
             {children}
         </CartContext.Provider>

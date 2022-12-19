@@ -6,7 +6,7 @@ import ItemCount from './ItemCount'
 import Loader from './Loader'
 
 const ItemDetailContainer = () => {
-    const [itemDetail, setItemDetail] = useState([])
+    const [itemDetail, setItemDetail] = useState({})
     useEffect(() => {
         setLoading(true)
         getItemDetail()
@@ -27,8 +27,8 @@ const ItemDetailContainer = () => {
     const {addToCart, cart} = useContext(CartContext)
     const addHandler = (cantidad) => {
         addToCart(itemDetail, cantidad)
+        console.log(cart);
     }
-    console.log(cart);
     return (
         <div className='item_datail'>
             {loading ?

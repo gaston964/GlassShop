@@ -27,7 +27,6 @@ const ItemDetailContainer = () => {
     const {addToCart, cart} = useContext(CartContext)
     const addHandler = (cantidad) => {
         addToCart(itemDetail, cantidad)
-        console.log(cart);
     }
     return (
         <div className='item_datail'>

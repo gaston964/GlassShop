@@ -4,8 +4,7 @@ import { CartContext } from '../context/CartContext'
 
 
 const Cart = ({ condition }) => {
-    const { cart, removeItem, emptyCart } = useContext(CartContext)
-    console.log(cart)
+    const { cart, removeItem, emptyCart, getTotalPrice } = useContext(CartContext)
     condition = cart.length === 0
     return (
         <>
@@ -27,7 +26,7 @@ const Cart = ({ condition }) => {
                                 <h1>{cartItm.title}</h1>
                                 <h3>{cartItm.price}</h3>
                                 <h4>Cantidad: {cartItm.cantidad}</h4>
-                                <h4>Total: {cartItm.price}</h4>
+                                <h4>Total: {}</h4>
                                 <button onClick={() => removeItem(cartItm.id)} >Eliminar</button>
                             </div>
                         ))}

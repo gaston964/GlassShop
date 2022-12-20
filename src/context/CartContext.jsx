@@ -21,8 +21,11 @@ export const CartContextProvider = ({ children }) => {
                 }
             })
             setCart(carritoActualizado)
-        } else {
-            return setCart([...cart, { ...item, cantidad }])
+            window.sessionStorage.setItem("cart", JSON.stringify(carritoActualizado));
+        } 
+        else {
+            setCart([...cart, { ...item, cantidad }])
+            window.sessionStorage.setItem("cart", JSON.stringify(cart));
         }
     }
     const removeItem = (id) => {
@@ -32,12 +35,28 @@ export const CartContextProvider = ({ children }) => {
     const emptyCart = (cart) => {
         setCart([]);
     }
+    function getTotalItemCount(){
+        let total = 0;
+        cart.forEach( itemInCart => {
+        total = total + itemInCart.cantidad
+        })
+        return total;
+        }
+        const getTotalPrice = () => { 
+            let totalPrice = 0;
+            cart.forEach( itemInCart => {
+                totalPrice = totalPrice + itemInCart.price
+            })
+            return totalPrice;
+        }
     return (
         <CartContext.Provider value={{
             cart,
             addToCart,
             removeItem,
             emptyCart,
+            getTotalItemCount,
+            getTotalPrice
         }}>
             {children}
         </CartContext.Provider>

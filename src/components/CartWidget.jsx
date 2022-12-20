@@ -4,13 +4,13 @@ import { CartContext } from '../context/CartContext';
 
 
 const CartWidget = () => {
-    const {cart} = useContext(CartContext)
+    const {getTotalItemCount} = useContext(CartContext)
     return (
         <div className='cart'>
             <button>
             <AiOutlineShoppingCart/>
             </button>
-            <span>{cart.cantidad}</span>
+            <span>{getTotalItemCount()}</span>
         </div>
     )
 }

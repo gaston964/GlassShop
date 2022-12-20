@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import { products } from '../mock/products'
 import ItemCount from './ItemCount'
@@ -24,9 +24,11 @@ const ItemDetailContainer = () => {
             }, 2000);
         })
     }
+    const [quantity, setquantity] = useState(0)
     const {addToCart, cart} = useContext(CartContext)
     const addHandler = (cantidad) => {
         addToCart(itemDetail, cantidad)
+        setquantity(cantidad)
     }
     return (
         <div className='item_datail'>
@@ -39,7 +41,10 @@ const ItemDetailContainer = () => {
                     <p className="item_price">${itemDetail.price}</p>
                     <p>{itemDetail.description}</p>
                     <h4 >Stock: {itemDetail.stock}</h4>
-                    <ItemCount stock={itemDetail.stock} onAdd={addHandler} />
+                    {quantity === 0 ? 
+                    <ItemCount stock={itemDetail.stock} onAdd={addHandler} /> 
+                    : 
+                    <Link to={"/cart"}><button>Terminar mi compra</button></Link>}
                 </div>
             }
         </div>

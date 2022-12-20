@@ -24,14 +24,14 @@ const Cart = ({ condition }) => {
                             <div className='itemCard' key={cartItm.id}>
                                 <img className='itemcard_img' src={cartItm.pictureUrl} alt={cartItm.title} />
                                 <h1>{cartItm.title}</h1>
-                                <h3>{cartItm.price}</h3>
+                                <h3>${cartItm.price}</h3>
                                 <h4>Cantidad: {cartItm.cantidad}</h4>
-                                <h4>Total: {}</h4>
+                                <h4>Subtotal: ${cartItm.cantidad * cartItm.price} </h4>
                                 <button onClick={() => removeItem(cartItm.id)} >Eliminar</button>
                             </div>
                         ))}
                     </div>
-                    <h3>Total: </h3>
+                    <h3>Total: ${getTotalPrice ()}</h3>
                     <button onClick={emptyCart}>Vaciar Carrito</button>
                 </div>
             }

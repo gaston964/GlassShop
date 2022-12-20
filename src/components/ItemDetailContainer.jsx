@@ -44,7 +44,7 @@ const ItemDetailContainer = () => {
                     {quantity === 0 ? 
                     <ItemCount stock={itemDetail.stock} onAdd={addHandler} /> 
                     : 
-                    <Link to={"/cart"}><button>Terminar mi compra</button></Link>}
+                    <Link to={"/cart"}><button className='item-det-button'>Terminar mi compra</button></Link>}
                 </div>
             }
         </div>

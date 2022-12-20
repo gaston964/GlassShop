@@ -188,9 +188,10 @@ li {
   border-radius: 35%;
   margin: 15px;
 }
-/* Item Cart */
+/* -----------Cart---------------- */
 .cartPadreCondicional{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -212,15 +213,22 @@ li {
   color: white;
 }
 .cartPadre{
-  display: block;
-  text-align: center;
   height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   margin: 25px;
 }
 .cartContainer{
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.cartBoE{
+  width: 300px;
+  margin: auto;
+  margin-top: 25px;
 }
 /* Footer */
 .footerContainer {

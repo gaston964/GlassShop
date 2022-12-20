@@ -213,7 +213,7 @@ li {
   color: white;
 }
 .cartPadre{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -228,7 +228,7 @@ li {
 .cartBoE{
   width: 300px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 95px;
 }
 /* Footer */
 .footerContainer {

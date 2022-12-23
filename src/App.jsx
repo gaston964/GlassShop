@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { Route, Routes } from 'react-router-dom'
 import Cart from './components/Cart'
+import ItemListFire from './components/fromFireBase/ItemListFire'
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <Route path='/category/:id' element={<ItemListContainer greeting={"Bienvenidos a GlassShop"}/>} />
       <Route path='/item/:id' element={<ItemDetailContainer/>} />
       <Route path='/cart' element={<Cart/>} />
+      <Route path='/firebase' element={<ItemListFire/>} />
     </Routes>
     <Footer/>
     </>

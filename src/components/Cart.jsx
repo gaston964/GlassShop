@@ -6,6 +6,14 @@ import { CartContext } from '../context/CartContext'
 const Cart = ({ condition }) => {
     const { cart, removeItem, emptyCart, getTotalPrice } = useContext(CartContext)
     condition = cart.length === 0
+    const makeOrder = () => {
+        const user = {name: 'Juan', phone: '261455289', emial: 'juan@gmail.com',}
+        const order = {
+            buyer: user,
+            items: cart
+        }
+        console.log('Levantando la order', order);
+    }
     return (
         <div className='cartview'>
             {condition &&
@@ -34,6 +42,7 @@ const Cart = ({ condition }) => {
                     <div className='cartBoE'>
                     <h3>Total: ${getTotalPrice ()}</h3>
                     <button className='item-det-button' onClick={emptyCart}>Vaciar Carrito</button>
+                    <button className='item-det-button' onClick={makeOrder}>Comprar</button>
                     </div>
                 </div>
             }

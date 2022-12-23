@@ -19,6 +19,7 @@ export const CartContextProvider = ({ children }) => {
                 if (prod.id === item.id) {
                     return { ...prod, cantidad: prod.cantidad + cantidad }
                 }
+                return prod;
             })
             setCart(carritoActualizado)
             /* window.sessionStorage.setItem("cart", JSON.stringify(carritoActualizado)); */

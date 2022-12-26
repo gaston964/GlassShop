@@ -12,7 +12,7 @@ const ItemListFire = () => {
 
     const getItemData = () => {
         const db = getFirestore()
-        const docRef = doc(db, 'Glasses', '7loPxPQY7ULNRTIkggP8')
+        const docRef = doc(db, 'products', '0A24cly5q5hDQy50PBjo')
         getDoc(docRef).then(snapshot => {
             setItem({ id: snapshot.id, ...snapshot.data() });
             console.log({ id: snapshot.id, ...snapshot.data() });
@@ -20,7 +20,7 @@ const ItemListFire = () => {
     }
     const getColeccionData = async () => {
         const db = getFirestore()
-        const collectionRef = collection(db, 'Glasses')
+        const collectionRef = collection(db, 'products')
         const snapShot = await getDocs(collectionRef)
         setItems(snapShot.docs.map(d => ({ id: d.id, ...d.data() })));
         console.log(snapShot.docs.map(d => ({ id: d.id, ...d.data() })));
@@ -32,7 +32,7 @@ const ItemListFire = () => {
             </h1>
             <h2>Producto destacado: </h2>
             <h3>{item.title} - Precio: {item.price} - Stock : {item.stock}</h3>
-            {items.map(i => <li key={i.id}>{items.title} - Price: {items.price}</li>)}
+            {items.map(i => <li key={i.id}>{i.title} - Price: {i.price}</li>)}
         </div>
     )
 }

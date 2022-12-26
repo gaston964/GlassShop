@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-import { products } from '../mock/products'
 import ItemCount from './ItemCount'
 import Loader from './Loader'
 
@@ -17,12 +16,7 @@ const ItemDetailContainer = () => {
     es para capturar datos en este caso "id" */
     const [loading, setLoading] = useState(false)
     const getItemDetail = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(products.find((item) => item.id === parseInt(id)))
-                setLoading(false)
-            }, 2000);
-        })
+        
     }
     const [quantity, setquantity] = useState(0)
     const {addToCart, cart} = useContext(CartContext)

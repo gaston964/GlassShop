@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList';
-import { products } from '../mock/products';
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const ItemListContainer = ({ greeting }) => {
     const [productList, setProductList] = useState([])
     const {id} = useParams()
     const [loading, setLoading] = useState(false)
-    const getProducts = () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(products)
-                setLoading(false)
-            }, 2000)
-        })
+    const getProducts = async () => {
+        const db = getFirestore()
+        const collectionRef = collection(db, "products")
+        const snapshot = await getDocs(collectionRef)
+        setTimeout(() => {
+            setProductList(snapshot.docs.map(d => ({id:d, ...d.data()})))
+            setLoading(false)
+        }, 2000);
     }
     useEffect(() => {
         if (id) {

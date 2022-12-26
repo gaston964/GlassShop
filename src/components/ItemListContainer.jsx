@@ -13,7 +13,7 @@ const ItemListContainer = ({ greeting }) => {
         const collectionRef = id ? query(collection(db, "products"), where("category", "==", id)) : collection(db, "products")
         const snapshot = await getDocs(collectionRef)
         setTimeout(() => {
-            setProductList(snapshot.docs.map(d => ({ id: d, ...d.data() })))
+            setProductList(snapshot.docs.map(d => ({ id: d.id, ...d.data() })))
             setLoading(false)
         }, 2000);
     }

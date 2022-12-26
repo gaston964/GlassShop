@@ -1,3 +1,4 @@
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
@@ -9,14 +10,19 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
         getItemDetail()
-            .then(response => setItemDetail(response))
     }, [])
     const { id } = useParams()
     /* caputura lo de la URL y lo pasa a codigo, lo pasa como string por eso usamos un parseInt o Number
     es para capturar datos en este caso "id" */
     const [loading, setLoading] = useState(false)
-    const getItemDetail = () => {
-        
+    const getItemDetail =  async () => {
+        const db = getFirestore()
+        const docRef = doc(db, "products",id)
+        const snapshot = await getDoc(docRef)
+        setTimeout(() => {
+            setItemDetail({id: snapshot.id, ...snapshot.data()})
+            setLoading(false)
+        }, 2000);
     }
     const [quantity, setquantity] = useState(0)
     const {addToCart, cart} = useContext(CartContext)

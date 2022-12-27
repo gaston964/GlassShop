@@ -1,24 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-import {serverTimestamp} from 'firebase/firestore'
+import MakeOrder from './MakeOrder'
+
 
 const Cart = ({ condition }) => {
     const { cart, removeItem, emptyCart, getTotalPrice } = useContext(CartContext)
     condition = cart.length === 0
-    const makeOrder = () => {
-        const user = {name: 'Juan', phone: '261455289', emial: 'juan@gmail.com',}
-        const order = {
-            buyer: user,
-            items: cart,
-            total: getTotalPrice (),
-            date: serverTimestamp()
-
-        }
-        
-
-        console.log('Levantando la order', order);
-    }
+    const [order, setOrder] = useState("clicked")
+    
     return (
         <div className='cartview'>
             {condition &&
@@ -47,7 +37,12 @@ const Cart = ({ condition }) => {
                     <div className='cartBoE'>
                     <h3>Total: ${getTotalPrice ()}</h3>
                     <button className='item-det-button' onClick={emptyCart}>Vaciar Carrito</button>
-                    <button className='item-det-button' onClick={makeOrder}>Comprar</button>
+                    {order == "clicked" ? 
+                    <button className={`item-det-button`} onClick={setOrder("unclicked")} >Comprar</button> 
+                    :
+                    <MakeOrder className={setOrder("unclicked")}/>
+                    }
+                    
                     </div>
                 </div>
             }

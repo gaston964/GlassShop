@@ -37,7 +37,7 @@ const ItemDetailContainer = () => {
                 :
                 <div className="itemCard">
                     <img className='itemcard_img' src={itemDetail.pictureUrl} alt={itemDetail.title} />
-                    <h1>{itemDetail.id} - {itemDetail.title}</h1>
+                    <h1>{itemDetail.title}</h1>
                     <p className="item_price">${itemDetail.price}</p>
                     <p>{itemDetail.description}</p>
                     <h4 >Stock: {itemDetail.stock}</h4>

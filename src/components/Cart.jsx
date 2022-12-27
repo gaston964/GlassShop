@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-
+import {serverTimestamp} from 'firebase/firestore'
 
 const Cart = ({ condition }) => {
     const { cart, removeItem, emptyCart, getTotalPrice } = useContext(CartContext)
@@ -10,8 +10,13 @@ const Cart = ({ condition }) => {
         const user = {name: 'Juan', phone: '261455289', emial: 'juan@gmail.com',}
         const order = {
             buyer: user,
-            items: cart
+            items: cart,
+            total: getTotalPrice (),
+            date: serverTimestamp()
+
         }
+        
+
         console.log('Levantando la order', order);
     }
     return (

@@ -121,6 +121,7 @@ li {
   margin: auto;
   text-align: center;
   background: rgba(128, 128, 128, 0.795);
+  
 }
 
 .itemCard>h4 {
@@ -223,7 +224,10 @@ li {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  margin: auto;
+}
+.cartContainer>div{
+  margin-right: 25px;
 }
 .cartBoE{
   width: 300px;
@@ -236,7 +240,12 @@ min-height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
-
+}
+.formularioPadre>h2{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.493);
+  width: 100%;
+  border-radius: 25px;
 }
 .formulario{
 display: flex;
@@ -270,10 +279,14 @@ border-radius: 15%;
 .cartFormularioP{
   width: 350px;
   height: 500px;
+  display: flex;
+  flex-direction: column;
 }
 .cartFormulario{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 }
 /* Footer */
 .footerContainer {
@@ -413,5 +426,16 @@ border-radius: 15%;
 }
 
 @media (max-width: 768px){
-
+.formularioPadre{
+  flex-direction: column;
+}
+.footerContainer{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.logoFooter{
+justify-content: center;
+margin-top: 15px;
+}
 }

@@ -1,19 +1,21 @@
+import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-import MakeOrder from './MakeOrder'
+
 
 
 const Cart = ({ condition }) => {
     const { cart, removeItem, emptyCart, getTotalPrice } = useContext(CartContext)
     condition = cart.length === 0
+    
     return (
         <div className='cartview'>
             {condition &&
                 <div className='cartPadreCondicional'>
                     <h2>No hay Items en el Carrito</h2>
                     <Link to={"/"}>
-                    <button className='cartBtn'>Volver al inicio</button>
+                        <button className='cartBtn'>Volver al inicio</button>
                     </Link>
                 </div>
             }
@@ -33,9 +35,11 @@ const Cart = ({ condition }) => {
                         ))}
                     </div>
                     <div className='cartBoE'>
-                    <h3>Total: ${getTotalPrice ()}</h3>
-                    <button className='item-det-button' onClick={emptyCart}>Vaciar Carrito</button>
-                    <button className={`item-det-button`}>Comprar</button> 
+                        <h3>Total: ${getTotalPrice()}</h3>
+                        <button className='item-det-button' onClick={emptyCart}>Vaciar Carrito</button>
+                        <Link to={"/form"} >
+                        <button className={`item-det-button`} >Comprar</button>
+                        </Link>
                     </div>
                 </div>
             }

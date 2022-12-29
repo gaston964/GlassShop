@@ -25,7 +25,6 @@ const ItemListContainer = ({ greeting }) => {
 
 
     }, [id]);
-    console.log(productList)
     return (
         <>
             <div className='itemListContaier'>

@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import { Route, Routes } from 'react-router-dom'
 import Cart from './components/Cart'
 import ItemListFire from './components/fromFireBase/ItemListFire'
+import MyForm from './components/MyForm'
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <Route path='/item/:id' element={<ItemDetailContainer/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/firebase' element={<ItemListFire/>} />
+      {<Route path='/form' element={<MyForm/>} />}
     </Routes>
     <Footer/>
     </>

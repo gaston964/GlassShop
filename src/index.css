@@ -230,6 +230,51 @@ li {
   margin: auto;
   margin-top: 95px;
 }
+/* -----------Formulario------------- */
+.formularioPadre{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.formulario{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 450px;
+width: 500px;
+background-color: rgba(0, 0, 0, 0.603);
+border-radius: 15%;
+}
+.formulario > input{
+  font-size: 1.3rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.formulario > input:focus{
+  background-color: lightblue;
+}
+.formulario>button{
+  margin-top: 15px;
+  width: 100px;
+  height: 40px;
+  border-radius: 25%;
+  font-size: 1rem;
+}
+.formulario>button:hover{
+  background-color: black;
+  color: white;
+}
+.cartFormularioP{
+  width: 350px;
+  height: 500px;
+}
+.cartFormulario{
+  display: flex;
+  flex-direction: column;
+}
 /* Footer */
 .footerContainer {
   width: 100%;

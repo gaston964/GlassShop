@@ -50,13 +50,3 @@ const Cart = ({ condition }) => {
 }
 
 export default Cart
-
-/* 
- <div className="itemCard">
-            <img className='itemcard_img' src={cartItm.pictureUrl} alt={cartItm.title} />
-            <h1>{cartItm.title}</h1>
-            <h3>{cartItm.price}</h3>
-            <h4>Cantidad:{cartItm.cantidad}</h4>
-            <h4>Total:{cartItm.price}</h4>
-        </div>
-*/
